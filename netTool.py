@@ -53,24 +53,4 @@ if choice == 2:
 			p = IP(dst=ip, src=ip_usr)/TCP(dport=port, sport=random.randint(0, 1024), flags="AR")
 			send(p)
 	for port in open_ports:
-		print(str(port + " ---- OPEN"))
-
-if choice == 3:
-	site = input("Website IP : ")
-	user = input("HTML user code : ")
-	passwd = input("HTML password code : ")
-	username = input("Username : ")
-	password_list = input("Password list name : ")
-	bad_pswd = input("Type bad password message : ")
-	good_pswd = input("Type good password message : ")
-
-	with open(password_list) as f:
-		content = f.readline()
-	for password in content:
-		password = password.rstip()
-		payload = {user: username , passwd: password}
-		print('[*] Testing : ' + password)
-		res = post(site,data=payload).content(bad_pswd, res.decode('utf-8'))
-		if find is None:
-			print("Password find : " + password)
-			break
+		print(str(port + " ---- OPEN"))	
