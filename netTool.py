@@ -10,6 +10,8 @@ import time
 print('[+] Choice :')
 print('1 - Scan Network')
 print('2 - Scan port')
+print('---------------')
+print('99 - Exit')
 
 choice = int(input('Type your choice : '))
 
@@ -54,3 +56,6 @@ if choice == 2:
 			send(p)
 	for port in open_ports:
 		print(str(port + " ---- OPEN"))	
+
+if choice == 99:
+	exit()
