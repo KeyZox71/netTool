@@ -49,11 +49,11 @@ if choice == 1:
 				name = "Not found"
 			print(host + " : " + name)
 	if choiceScNet == 2:
-
+		exit()
 	if choiceScNet == 3:
-
+		exit()
 	if choiceScNet == 4:
-		
+		exit()
 	if choiceScNet == 99:
 		exit()
 if choice == 2:
